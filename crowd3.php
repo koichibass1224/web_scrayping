@@ -10,9 +10,9 @@
     $doc = phpQuery::newDocument($html);
 
     //要素取得
-    //var_dump($html);//echoでhtmlは表示できるが、new情報だけ取得できない。これが原因？？
-    echo $doc[".projects"]->find("img:eq(1)")->text(); //imgのソースを取得したい
-    echo $doc[".projects"]->find("h4")->text();//タイトル
-    echo $doc[".projects"]->find(".money")->find("p:eq(1)")->text();//金額
+    var_dump($html);//echoでhtmlは表示できるが、new情報だけ取得できない。これが原因？？
+    echo $doc[".discover-contents"]->find("img:eq(1)")->text(); //imgのソースを取得したい
+    echo $doc[".discover-contents"]->find("h4")->text();//タイトル
+    echo $doc[".discover-contents"]->find(".money")->find("p:eq(1)")->text();//金額
     echo $doc[".money:eq(1)"]->find("p:eq(1)")->text();//金額・こちらが正しい？？
 ?>
